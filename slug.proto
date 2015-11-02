@@ -46,7 +46,7 @@ message SlugConfigureArmMessage {
 message SlugConfigureLegMessage {
   required string slm8LegModel    = 3;
   required string slm8ArmorModel  = 2;
-  required int32  slm8LegPosition = 2;
+  required int32  slm8LegPosition = 1;
 }
 
 message SlugConfigureWeaponMessage {
