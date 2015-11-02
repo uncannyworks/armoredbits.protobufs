@@ -20,10 +20,11 @@ message SlugConfigureCockpitRequest {
 }
 
 message SlugConfigureTorsoRequest  {
-  required string slm3EngineModel                 = 1;
-  required string slm3ArmorModel                  = 2;
-  repeated SlugConfigureWeaponMessage slm3Weapons = 3;
-  repeated string slm3CounterMeasureModels        = 4;
+  required string slm3TorsoModel                  = 1;
+  required string slm3EngineModel                 = 2;
+  required string slm3ArmorModel                  = 3;
+  repeated SlugConfigureWeaponMessage slm3Weapons = 4;
+  repeated string slm3CounterMeasureModels        = 5;
 }
  
 message SlugConfigureArmsRequest {
@@ -35,15 +36,17 @@ message SlugConfigureLegsRequest {
 }
 
 message SlugConfigureArmMessage {
-  required string slm7ArmorModel                  = 1;
-  repeated SlugConfigureWeaponMessage slm7Weapons = 2;
-  repeated string slm7CounterMeasureModels        = 3;
-  required string slm7ArmPosition                 = 4;
+  required string slm7ArmModel                    = 1;
+  required string slm7ArmorModel                  = 2;
+  repeated SlugConfigureWeaponMessage slm7Weapons = 3;
+  repeated string slm7CounterMeasureModels        = 4;
+  required string slm7ArmPosition                 = 5;
 }
 
 message SlugConfigureLegMessage {
-  required string slm8ArmorModel      = 1;
-  required int32  slm8LegPosition     = 2;
+  required string slm8LegModel    = 3;
+  required string slm8ArmorModel  = 2;
+  required int32  slm8LegPosition = 2;
 }
 
 message SlugConfigureWeaponMessage {
