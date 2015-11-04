@@ -2,6 +2,8 @@
 
 | Code | Message                     | Type
 -------|-----------------------------|----------
+|  1   | ServerStateMessage          | Message
+| 10   | ServerWorldStateMessage     | Message
 | 20   | SlugConfigureChassisRequest | Configure
 | 22   | SlugConfigureCockpitRequest | Configure
 | 24   | SlugConfigureTorsoRequest   | Configure
@@ -22,6 +24,24 @@
 | 103  | SlugActionLoginResponse     | Command
 | 200  | ClientActionLoginRequest    | Command
 | 201  | ClientActionLoginResponse   | Command
+
+## Server State Codes
+
+| Code | State
+-------|-----------------------------
+| 1    | Initializing
+| 2    | WaitingForSlugs
+| 3    | Ready
+
+## World State Codes
+
+| Code | State
+-------|-----------------------------
+| 1    | Initializing
+| 2    | ConfigurationPhase
+| 3    | StartupPhase
+| 4    | GamePhase
+| 5    | GameOverPhase
 
 ## Error Codes
 

@@ -1,3 +1,53 @@
+message ServerStateMessage {
+  required int32 sm1ServerState = 1;
+}
+
+message ServerWorldStateMessage {
+  required int32 sm2WorldState = 1;
+}
+
+message SlugActionLoginRequest {
+  required string slma1GameId   = 1;
+  required string slma1SlugId   = 2;
+  required string slma1UserName = 3;
+}
+
+// empty message
+// message SlugActionLoginResponse {
+// }
+
+message ServerSlugGenericResponse {
+  required int32 ssgm1Response = 1;
+  optional int32 ssgm1Error    = 2;
+}
+
+message SlugConfigureChassisRequest {
+  required string slm1ChassisModel          = 1;
+  required string slm1ChassisReactorModel   = 2;
+  required string slm1ChassisGyroModel      = 3;
+  optional string slm1ChassisCapacitorModel = 4;
+}
+
+message SlugConfigureCockpitRequest {
+  required string slm2CockpitModel         = 1;
+  required string slm2ComputerModel        = 2;
+  repeated string slm2SensorModels         = 3;
+  repeated string slm2CommunicationModels  = 4;
+  required string slm2ArmorModel           = 5;
+  repeated string slm2CounterMeasureModels = 6;
+}
+
+message SlugConfigureTorsoRequest  {
+  required string slm3TorsoModel                  = 1;
+  required string slm3EngineModel                 = 2;
+  required string slm3ArmorModel                  = 3;
+  repeated SlugConfigureWeaponMessage slm3Weapons = 4;
+  repeated string slm3CounterMeasureModels        = 5;
+}
+ 
+message SlugConfigureArmsRequest {
+  repeated SlugConfigureArmMessage slm4Arms = 1;
+}
 message SlugActionLoginRequest {
   required string slma1GameId   = 1;
   required string slma1SlugId   = 2;
