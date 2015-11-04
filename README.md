@@ -49,7 +49,7 @@ From the Haskell game server:
 | 116  | GyroNotFound Model
 | 117  | LegNotFound Model
 | 118  | LegNotConfigured
-| 129  | ProtocolMismatch
+| 119  | ProtocolMismatch
 | 120  | ReactorNotFound Model
 | 121  | SensorNotFound Model
 | 122  | SensorOverLimit
