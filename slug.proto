@@ -1,3 +1,13 @@
+message SlugActionLoginRequest {
+  required string slma1GameId   = 1;
+  required string slma1SlugId   = 2;
+  required string slma1UserName = 3;
+}
+
+// empty message
+// message SlugActionLoginResponse {
+// }
+
 message ServerSlugGenericResponse {
   required int32 ssgm1Response = 1;
   optional int32 ssgm1Error    = 2;

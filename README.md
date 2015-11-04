@@ -19,8 +19,9 @@
 | 59   | SlugGetQueryLegResponse     | Query
 | 101  | ServerSlugGenericResponse   | Generic
 | 102  | SlugActionLoginRequest      | Command
+| 103  | SlugActionLoginResponse     | Command
 | 200  | ClientActionLoginRequest    | Command
-| 201  | ServerClientLoginResponse   | Command
+| 201  | ClientActionLoginResponse   | Command
 
 ## Error Codes
 
