@@ -9,6 +9,7 @@
 | 24   | SlugConfigureTorsoRequest   | Configure
 | 26   | SlugConfigureArmsRequest    | Configure
 | 28   | SlugConfigureLegsRequest    | Configure
+| 30   | SlugConfigureDoneRequest    | Configure
 | 50   | SlugGetQueryChassisRequest  | Query
 | 51   | SlugGetQueryChassisResponse | Query
 | 52   | SlugGetQueryTorsoRequest    | Query
@@ -78,3 +79,13 @@ From the Haskell game server:
 | 124  | TorsoNotConfigured
 | 125  | WeaponNotFound Model
 | 126  | WeaponOverLimit
+
+## Simulation Codes
+
+These are sent from the server to the 3d client.
+
+| Code | Message
+-------|---------------------------------
+| 1    | ServerClientObjectSpawnMessage 
+| 2    | ServerClientObjectMoveMessage 
+| 3    | ServerClientObjectDestroyMessage 

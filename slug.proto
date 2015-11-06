@@ -113,3 +113,7 @@ message SlugConfigureWeaponMessage {
   required string slm8WeaponModel    = 1;
   required string slm8CapacitorModel = 2;
 }
+
+// empty message
+// message SlugConfigureDoneRequest {
+// }

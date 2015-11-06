@@ -1,0 +1,22 @@
+import "general.proto";
+
+message ServerClientObjectSpawnMessage {
+  optional int32 scm1PlayerId               = 1:
+  optional int32 scm1TypeId                 = 2;
+  required int32 scm1ObjectId               = 3;
+  required int32 scm1ObjectType             = 4;
+  required VectorMessage scm1ObjectPosition = 5;
+  required VectorMessage scm1ObjectRotation = 6;
+}
+
+
+message ServerClientObjectMoveMessage {
+  required int32         scm2MoveObjectId       = 1;
+  required VectorMessage scm2MoveObjectPosition = 2;
+  required VectorMessage scm2MoveObjectRotation = 3;
+}
+
+message ServerClientObjectDestroyMessage {
+  required int32 scm3DestroyObjectId   = 1:
+  required int32 scm3DestroyObjectType = 2;
+}

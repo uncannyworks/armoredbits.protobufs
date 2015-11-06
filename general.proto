@@ -1,0 +1,5 @@
+message VectorMessage {
+  float required vmX = 1;
+  float required vmY = 2;
+  float required vmZ = 3;
+}
