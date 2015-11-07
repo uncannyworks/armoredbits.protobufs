@@ -1,15 +1,15 @@
 message ServerStateMessage {
-  required int32 sm1ServerState = 1;
+  required int32 serverState = 1;
 }
 
 message ServerWorldStateMessage {
-  required int32 sm2WorldState = 1;
+  required int32 worldState = 1;
 }
 
 message SlugActionLoginRequest {
-  required string slma1GameId   = 1;
-  required string slma1SlugId   = 2;
-  required string slma1UserName = 3;
+  required string gameId   = 1;
+  required string slugId   = 2;
+  required string userName = 3;
 }
 
 // empty message
@@ -17,43 +17,43 @@ message SlugActionLoginRequest {
 // }
 
 message ServerSlugGenericResponse {
-  required int32 ssgm1Response = 1;
-  optional int32 ssgm1Error    = 2;
+  required int32 response = 1;
+  optional int32 error    = 2;
 }
 
 // Configuration
 
 message SlugConfigureChassisRequest {
-  required string slm1ChassisModel          = 1;
-  required string slm1ChassisReactorModel   = 2;
-  required string slm1ChassisGyroModel      = 3;
-  optional string slm1ChassisCapacitorModel = 4;
+  required string model          = 1;
+  required string reactorModel   = 2;
+  required string gyroModel      = 3;
+  optional string capacitorModel = 4;
 }
 
 message SlugConfigureCockpitRequest {
-  required string slm2CockpitModel         = 1;
-  required string slm2ComputerModel        = 2;
-  repeated string slm2SensorModels         = 3;
-  repeated string slm2CommunicationModels  = 4;
-  required string slm2ArmorModel           = 5;
-  repeated string slm2CounterMeasureModels = 6;
+  required string cockpitModel         = 1;
+  required string computerModel        = 2;
+  repeated string sensorModels         = 3;
+  repeated string communicationModels  = 4;
+  required string armorModel           = 5;
+  repeated string counterMeasureModels = 6;
 }
 
 message SlugConfigureTorsoRequest  {
-  required string slm3TorsoModel                  = 1;
-  required string slm3EngineModel                 = 2;
-  required string slm3ArmorModel                  = 3;
-  repeated SlugConfigureWeaponMessage slm3Weapons = 4;
-  repeated string slm3CounterMeasureModels        = 5;
+  required string torsoModel                  = 1;
+  required string engineModel                 = 2;
+  required string armorModel                  = 3;
+  repeated SlugConfigureWeaponMessage weapons = 4;
+  repeated string counterMeasureModels        = 5;
 }
  
 message SlugConfigureArmsRequest {
-  repeated SlugConfigureArmMessage slm4Arms = 1;
+  repeated SlugConfigureArmMessage arms = 1;
 }
 message SlugActionLoginRequest {
-  required string slma1GameId   = 1;
-  required string slma1SlugId   = 2;
-  required string slma1UserName = 3;
+  required string gameId   = 1;
+  required string slugId   = 2;
+  required string userName = 3;
 }
 
 // empty message
@@ -61,59 +61,59 @@ message SlugActionLoginRequest {
 // }
 
 message ServerSlugGenericResponse {
-  required int32 ssgm1Response = 1;
-  optional int32 ssgm1Error    = 2;
+  required int32 response = 1;
+  optional int32 error    = 2;
 }
 
 message SlugConfigureChassisRequest {
-  required string slm1ChassisModel          = 1;
-  required string slm1ChassisReactorModel   = 2;
-  required string slm1ChassisGyroModel      = 3;
-  optional string slm1ChassisCapacitorModel = 4;
+  required string model          = 1;
+  required string reactorModel   = 2;
+  required string gyroModel      = 3;
+  optional string capacitorModel = 4;
 }
 
 message SlugConfigureCockpitRequest {
-  required string slm2CockpitModel         = 1;
-  required string slm2ComputerModel        = 2;
-  repeated string slm2SensorModels         = 3;
-  repeated string slm2CommunicationModels  = 4;
-  required string slm2ArmorModel           = 5;
-  repeated string slm2CounterMeasureModels = 6;
+  required string cockpitModel         = 1;
+  required string computerModel        = 2;
+  repeated string sensorModels         = 3;
+  repeated string communicationModels  = 4;
+  required string armorModel           = 5;
+  repeated string counterMeasureModels = 6;
 }
 
 message SlugConfigureTorsoRequest  {
-  required string slm3TorsoModel                  = 1;
-  required string slm3EngineModel                 = 2;
-  required string slm3ArmorModel                  = 3;
-  repeated SlugConfigureWeaponMessage slm3Weapons = 4;
-  repeated string slm3CounterMeasureModels        = 5;
+  required string torsoModel                  = 1;
+  required string engineModel                 = 2;
+  required string armorModel                  = 3;
+  repeated SlugConfigureWeaponMessage weapons = 4;
+  repeated string counterMeasureModels        = 5;
 }
  
 message SlugConfigureArmsRequest {
-  repeated SlugConfigureArmMessage slm4Arms = 1;
+  repeated SlugConfigureArmMessage arms = 1;
 }
 
 message SlugConfigureLegsRequest {
-  repeated SlugConfigureLegMessage slm5Legs = 1;
+  repeated SlugConfigureLegMessage legs = 1;
 }
 
 message SlugConfigureArmMessage {
-  required string slm7ArmModel                    = 1;
-  required string slm7ArmorModel                  = 2;
-  repeated SlugConfigureWeaponMessage slm7Weapons = 3;
-  repeated string slm7CounterMeasureModels        = 4;
-  required string slm7ArmPosition                 = 5;
+  required string armModel                    = 1;
+  required string armorModel                  = 2;
+  repeated SlugConfigureWeaponMessage weapons = 3;
+  repeated string counterMeasureModels        = 4;
+  required string armPosition                 = 5;
 }
 
 message SlugConfigureLegMessage {
-  required string slm8LegModel    = 1;
-  required string slm8ArmorModel  = 2;
-  required int32  slm8LegPosition = 3;
+  required string legModel    = 1;
+  required string armorModel  = 2;
+  required int32  legPosition = 3;
 }
 
 message SlugConfigureWeaponMessage {
-  required string slm8WeaponModel    = 1;
-  required string slm8CapacitorModel = 2;
+  required string weaponModel    = 1;
+  required string capacitorModel = 2;
 }
 
 // empty message
@@ -127,20 +127,20 @@ message SlugConfigureWeaponMessage {
 // }
 
 message SlugGetQueryChassisResponse {
-  required string ssgqm1State                 = 1;
-  required int32  ssgqm1MaxWeight             = 2;
-  required int32  ssgqm1CurrentWeight         = 3;
-  required bool   ssgqm1HasStorage            = 4;
-  required bool   ssgqm1HasCapacitor          = 5;
-  required int32  ssgqm1ArmCount              = 6;
-  required int32  ssgqm1LegCount              = 7;
-  required VectorMessage ssgqm1Position       = 8;
-  required VectorMessage ssgqm1MoveTarget     = 9;
-  required float ssgqm1Acceleration           = 10;
-  required float ssgqm1AccelerationMax        = 11:
-  required VectorMessage ssgqm1Rotation       = 12:
-  required float ssgqm1RotationRate           = 13:
-  required VectorMessage ssgqm1RotationTarget = 14:
+  required string state                 = 1;
+  required int32  maxWeight             = 2;
+  required int32  currentWeight         = 3;
+  required bool   hasStorage            = 4;
+  required bool   hasCapacitor          = 5;
+  required int32  armCount              = 6;
+  required int32  legCount              = 7;
+  required VectorMessage position       = 8;
+  required VectorMessage moveTarget     = 9;
+  required float acceleration           = 10;
+  required float accelerationMax        = 11:
+  required VectorMessage rotation       = 12:
+  required float rotationRate           = 13:
+  required VectorMessage rotationTarget = 14:
 }
 
 // empty message
@@ -148,10 +148,10 @@ message SlugGetQueryChassisResponse {
 // }
 
 message SlugGetQueryTorsoResponse {
-  required  string ssgqm2State               = 1;
-  required  bool   ssgqm2HasStorage          = 2;
-  required  int32  ssgqm2WeaponLimit         = 3;
-  required  int32  ssgqm2CounterMeasureLimit = 4;
+  required  string state               = 1;
+  required  bool   hasStorage          = 2;
+  required  int32  weaponLimit         = 3;
+  required  int32  counterMeasureLimit = 4;
 }
 
 // empty message
@@ -159,29 +159,29 @@ message SlugGetQueryTorsoResponse {
 // }
 
 SlugGetQueryCockpitResponse {
-  required string ssgqm3State               = 1; 
-  required int32  ssgqm3SensorLimit         = 2; 
-  required int32  ssgqm3CommunicationsLimit = 3; 
-  required int32  ssgqm3CounterMeasureLimit = 4; 
+  required string state               = 1; 
+  required int32  sensorLimit         = 2; 
+  required int32  communicationsLimit = 3; 
+  required int32  counterMeasureLimit = 4; 
 }
 
 message SlugGetQueryArmRequest {
-  required int32 slgqm4Index = 1;
+  required int32 index = 1;
 }
 
 SlugGetQueryArmResponse {
-  required string ssgqm4State               = 1;
-  required bool   ssgqm4HasStorage          = 2;
-  required int32  ssgqm4WeaponLimit         = 3;
-  required int32  ssgqm4CounterMeasureLimit = 4;
+  required string state               = 1;
+  required bool   hasStorage          = 2;
+  required int32  weaponLimit         = 3;
+  required int32  counterMeasureLimit = 4;
 }
 
 message SlugGetQueryLegRequest {
-  required int32 slgqm5Index = 1;
+  required int32 index = 1;
 }
 
 message SlugGetQueryLegResponse {
-  required string ssgqm5State = 1;
+  required string state = 1;
 }
 
 
