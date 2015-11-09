@@ -94,7 +94,7 @@ message SlugGetQueryWarMachineResponse {
   required bool   hasStorage                        = 4;
   required SlugQueryStorageMessage storage          = 5;
   required bool   hasCapacitor                      = 6;
-  required SlugMessageCapacitorMessage hasCapacitor = 7;
+  required SlugQueryCapacitorMessage capacitor      = 7;
   required int32  armCount                          = 8;
   required int32  legCount                          = 9;
   required VectorMessage position                   = 10;

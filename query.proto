@@ -70,6 +70,16 @@ message SlugQueryEngineMessage {
   required float speedCurrent                     = 6;
 }
 
+message SlugQueryLegMessage {
+  required state string                = 1;
+  required armor SlugQueryArmorMessage = 2;
+}
+
+message SlugQueryReactorMessage {
+  required string state = 1;
+  required int32 output = 2;
+}
+
 message SlugQuerySensorMessage {
   required string state                           = 1;
   required ActiveComponentMessage activeComponent = 2;
@@ -82,6 +92,16 @@ message SlugQuerySensorMessage {
 
 message SlugQueryStorageMessage {
   required int32 size = 1;
+}
+
+message SlugQueryTorsoMessage {
+  required string state                                   = 1;
+  required bool hasStorage                                = 2;
+  optional SlugQueryStorageMessage storage                = 3;
+  required SlugQueryEngineMessage engine                  = 4;
+  required SlugQueryArmorMessage armor                    = 5;
+  repeated SlugQueryWeaponMessage weapons                 = 6;
+  repeated SlugQueryCounterMeasureMessage counterMeasures = 7;
 }
 
 message SlugQueryWeaponMessage {
