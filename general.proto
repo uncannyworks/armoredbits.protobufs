@@ -3,3 +3,9 @@ message VectorMessage {
   required float y = 2;
   required float z = 3;
 }
+
+message ActiveComponentMessage {
+  required float startupTime      = 1;
+  required int32 powerDrawIdle    = 2;
+  required int32 powerDrawActivee = 3;
+}
