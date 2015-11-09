@@ -1,12 +1,12 @@
 import "general.proto";
 
 message ServerClientObjectSpawnMessage {
-  optional int32 playerId         = 1:
+  optional int32 playerId         = 1;
   optional int32 typeId           = 2;
   required int32 objectId         = 3;
   required int32 objectType       = 4;
   required VectorMessage position = 5;
-  required vectormessage rotation = 6;
+  required VectorMessage rotation = 6;
 }
 
 
@@ -17,6 +17,6 @@ message ServerClientObjectMoveMessage {
 }
 
 message ServerClientObjectDestroyMessage {
-  required int32 objectId   = 1:
+  required int32 objectId   = 1;
   required int32 objectType = 2;
 }

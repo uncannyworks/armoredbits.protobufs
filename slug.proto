@@ -1,3 +1,5 @@
+import "general.proto";
+
 message ServerStateMessage {
   required int32 serverState = 1;
 }
@@ -22,48 +24,6 @@ message ServerSlugGenericResponse {
 }
 
 // Configuration
-
-message SlugConfigureChassisRequest {
-  required string model          = 1;
-  required string reactorModel   = 2;
-  required string gyroModel      = 3;
-  optional string capacitorModel = 4;
-}
-
-message SlugConfigureCockpitRequest {
-  required string cockpitModel         = 1;
-  required string computerModel        = 2;
-  repeated string sensorModels         = 3;
-  repeated string communicationModels  = 4;
-  required string armorModel           = 5;
-  repeated string counterMeasureModels = 6;
-}
-
-message SlugConfigureTorsoRequest  {
-  required string torsoModel                  = 1;
-  required string engineModel                 = 2;
-  required string armorModel                  = 3;
-  repeated SlugConfigureWeaponMessage weapons = 4;
-  repeated string counterMeasureModels        = 5;
-}
- 
-message SlugConfigureArmsRequest {
-  repeated SlugConfigureArmMessage arms = 1;
-}
-message SlugActionLoginRequest {
-  required string gameId   = 1;
-  required string slugId   = 2;
-  required string userName = 3;
-}
-
-// empty message
-// message SlugActionLoginResponse {
-// }
-
-message ServerSlugGenericResponse {
-  required int32 response = 1;
-  optional int32 error    = 2;
-}
 
 message SlugConfigureChassisRequest {
   required string model          = 1;
@@ -137,10 +97,10 @@ message SlugGetQueryChassisResponse {
   required VectorMessage position       = 8;
   required VectorMessage moveTarget     = 9;
   required float acceleration           = 10;
-  required float accelerationMax        = 11:
-  required VectorMessage rotation       = 12:
-  required float rotationRate           = 13:
-  required VectorMessage rotationTarget = 14:
+  required float accelerationMax        = 11;
+  required VectorMessage rotation       = 12;
+  required float rotationRate           = 13;
+  required VectorMessage rotationTarget = 14;
 }
 
 // empty message
@@ -158,7 +118,7 @@ message SlugGetQueryTorsoResponse {
 // message SlugGetQueryCockpitRequest {
 // }
 
-SlugGetQueryCockpitResponse {
+message SlugGetQueryCockpitResponse {
   required string state               = 1; 
   required int32  sensorLimit         = 2; 
   required int32  communicationsLimit = 3; 
@@ -169,7 +129,7 @@ message SlugGetQueryArmRequest {
   required int32 index = 1;
 }
 
-SlugGetQueryArmResponse {
+message SlugGetQueryArmResponse {
   required string state               = 1;
   required bool   hasStorage          = 2;
   required int32  weaponLimit         = 3;
@@ -183,5 +143,3 @@ message SlugGetQueryLegRequest {
 message SlugGetQueryLegResponse {
   required string state = 1;
 }
-
-

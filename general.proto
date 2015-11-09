@@ -1,5 +1,5 @@
 message VectorMessage {
-  float required vmX = 1;
-  float required vmY = 2;
-  float required vmZ = 3;
+  required float x = 1;
+  required float y = 2;
+  required float z = 3;
 }
