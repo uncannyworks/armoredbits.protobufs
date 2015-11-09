@@ -105,8 +105,8 @@ message SlugGetQueryWarMachineResponse {
   required float rotationRate                       = 15;
   required VectorMessage rotationTarget             = 16;
   required SlugQueryReactorMessage reactor          = 17;
-  required SlugQueryTorsoMessage reactor            = 18;
-  required SlugQueryCockpitMessage reactor          = 19;
+  required SlugQueryTorsoMessage torso              = 18;
+  required SlugQueryCockpitMessage cockpit          = 19;
   repeated SlugQueryArmMessage arms                 = 20;
   repeated SlugQueryLegMessage legs                 = 21;
 }
