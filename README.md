@@ -38,7 +38,11 @@
 
 ## Error Codes
 
-From the Haskell game server:
+### State Error Codes
+
+| Code | Error                       
+-------|-----------
+| 50   | WrongState
 
 ### Configuration Error Codes
 
@@ -47,30 +51,33 @@ From the Haskell game server:
 | 100  | ActuatorNotFound Model
 | 101  | AmmoNotFound Model
 | 102  | ArmNotFound Model
-| 103  | ArmNotConfigured
-| 104  | ArmorNotFound Model
-| 105  | CapacitorNotFound Model
-| 106  | ChassisNotFound Model
-| 107  | ChassisNotConfigured
-| 108  | CockpitNotFound Model
-| 109  | CockpitNotConfigured
-| 110  | CommunicationNotFound Model
-| 111  | CommunicationsOverLimit
-| 112  | ComputerNotFound Model
-| 113  | CounterMeasureNotFound Model
-| 114  | CounterMeasureOverLimit
-| 115  | EngineNotFound Model
-| 116  | GyroNotFound Model
-| 117  | LegNotFound Model
-| 118  | LegNotConfigured
-| 119  | ProtocolMismatch
-| 120  | ReactorNotFound Model
-| 121  | SensorNotFound Model
-| 122  | SensorOverLimit
-| 123  | TorsoNotFound Model
-| 124  | TorsoNotConfigured
-| 125  | WeaponNotFound Model
-| 126  | WeaponOverLimit
+| 103  | ArmNoIndex ComponentId
+| 104  | ArmNotConfigured
+| 105  | ArmorNotFound Model
+| 106  | CapacitorNotFound Model
+| 107  | ChassisNotFound Model
+| 108  | ChassisNotConfigured
+| 109  | CockpitNotFound Model
+| 110  | CockpitNotConfigured
+| 111  | CommunicationNotFound Model
+| 112  | CommunicationsOverLimit
+| 113  | ComputerNotFound Model
+| 114  | CounterMeasureNotFound Model
+| 115  | CounterMeasureOverLimit
+| 116  | EngineNotFound Model
+| 117  | GyroNotFound Model
+| 118  | LegNotFound Model
+| 119  | LegNoIndex ComponentId
+| 120  | LegNotConfigured
+| 121  | OverChassisMaxWeight
+| 122  | ProtocolMismatch
+| 123  | ReactorNotFound Model
+| 124  | SensorNotFound Model
+| 125  | SensorOverLimit
+| 126  | TorsoNotFound Model
+| 127  | TorsoNotConfigured
+| 128  | WeaponNotFound Model
+| 129  | WeaponOverLimit
 
 ## Simulation Codes
 
