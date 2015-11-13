@@ -225,7 +225,7 @@ message SlugConfigureArmMessage {
   required string armorModel                  = 2;
   repeated SlugConfigureWeaponMessage weapons = 3;
   repeated string counterMeasureModels        = 4;
-  required string armPosition                 = 5;
+  required int32 armPosition                 = 5;
 }
 
 message SlugConfigureLegMessage {
