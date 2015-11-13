@@ -77,9 +77,9 @@ message SlugConfigureWeaponMessage {
   required string capacitorModel = 2;
 }
 
-// empty message
-// message SlugConfigureDoneRequest {
-// }
+message SlugConfigureDoneRequest {
+  required bool default = 1;
+}
 
 // Query
 
