@@ -78,7 +78,7 @@ message SlugConfigureWeaponMessage {
 }
 
 message SlugConfigureDoneRequest {
-  required bool default = 1;
+  required bool preset = 1;
 }
 
 // Query
