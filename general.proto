@@ -5,7 +5,7 @@ message VectorMessage {
 }
 
 message ActiveComponentMessage {
-  required float startupTime      = 1;
-  required int32 powerDrawIdle    = 2;
-  required int32 powerDrawActivee = 3;
+  required float startupTime     = 1;
+  required int32 powerDrawIdle   = 2;
+  required int32 powerDrawActive = 3;
 }

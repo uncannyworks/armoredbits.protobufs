@@ -12,7 +12,7 @@ message SlugQueryArmMessage {
 message SlugQueryArmorMessage {
   required int32 valueFrontMax     = 1;
   required int32 valueFrontCurrent = 2;
-  required int32 valueBacktMax     = 3;
+  required int32 valueBackMax      = 3;
   required int32 valueBackCurrent  = 4;
 }
 
@@ -25,7 +25,7 @@ message SlugQueryCapacitorMessage {
 
 message SlugQueryCockpitMessage {
   required string state                                   = 1;
-  repeated SlugQueryComputerMessage computer              = 2;
+  repeated SlugQueryComputerMessage computers             = 2;
   repeated SlugQueryCommunicationMessage communications   = 3;
   repeated SlugQuerySensorMessage sensors                 = 4;
   repeated SlugQueryCounterMeasureMessage counterMeasures = 5;
@@ -108,24 +108,22 @@ message SlugQueryWeaponMessage {
   required string state                           = 1;
   required ActiveComponentMessage activeComponent = 2;
   required string wType                           = 3;
-  required bool hasStorage                        = 4;
-  optional SlugQueryStorageMessage storage        = 5;
-  required bool hasCapacitor                      = 6;
-  optional SlugQueryCapacitorMessage capacitor    = 7;
-  required float fireRate                         = 8; 
-  required float firedLast                        = 9; 
-  required int32 ammoMax                          = 10;
-  required int32 ammoCurrent                      = 11;
-  required int32 clipMax                          = 12;
-  required int32 clipCurrent                      = 13;
-  required bool clipReloading                     = 14; 
-  required float reloadRate                       = 15;
-  required bool jammed                            = 16; 
-  required float rangeLow                         = 17;
-  required float rangeMid                         = 18;
-  required float rangeHigh                        = 19;
-  required float damageLow                        = 20;
-  required float damageMid                        = 21;
-  required float damageHigh                       = 22;
-  required int32 firedCount                       = 23;
+  required bool hasCapacitor                      = 4;
+  optional SlugQueryCapacitorMessage capacitor    = 5;
+  required float fireRate                         = 6; 
+  required float firedLast                        = 7; 
+  required int32 ammoMax                          = 8;
+  required int32 ammoCurrent                      = 9;
+  required int32 clipMax                          = 10;
+  required int32 clipCurrent                      = 11;
+  required bool clipReloading                     = 12; 
+  required float reloadRate                       = 13;
+  required bool jammed                            = 14; 
+  required float rangeLow                         = 15;
+  required float rangeMid                         = 16;
+  required float rangeHigh                        = 17;
+  required float damageLow                        = 18;
+  required float damageMid                        = 19;
+  required float damageHigh                       = 20;
+  required int32 firedCount                       = 21;
 }

@@ -35,7 +35,7 @@ message SlugConfigureChassisRequest {
 
 message SlugConfigureCockpitRequest {
   required string cockpitModel         = 1;
-  required string computerModel        = 2;
+  repeated string computerModels       = 2;
   repeated string sensorModels         = 3;
   repeated string communicationModels  = 4;
   required string armorModel           = 5;
