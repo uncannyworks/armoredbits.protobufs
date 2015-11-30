@@ -1,5 +1,16 @@
 import "general.proto";
 
+message SlugQueryActuatorMessage {
+  required string state                   = 1;
+  required VectorMessage rotationMin      = 2;
+  required VectorMessage rotationMax      = 3;
+  required VectorMessage rotationDefault  = 4;
+  required VectorMessage rotationCurrent  = 5;
+  required VectorMessage rotationTarget   = 6;
+  required VectorMessage rotationSpeedMax = 7;
+  required VectorMessage rotationSpeed    = 8;
+}
+
 message SlugQueryArmMessage {
   required string state                                   = 1;
   required bool hasStorage                                = 2;
