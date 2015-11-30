@@ -48,6 +48,7 @@ message SlugConfigureTorsoRequest  {
   required string armorModel                  = 3;
   repeated SlugConfigureWeaponMessage weapons = 4;
   repeated string counterMeasureModels        = 5;
+  required string actuatorModel               = 6;
 }
  
 message SlugConfigureArmsRequest {
