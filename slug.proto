@@ -89,25 +89,23 @@ message SlugConfigureDoneRequest {
 // }
 
 message SlugGetQueryWarMachineResponse {
-  required string state                             = 1;
-  required int32  maxWeight                         = 2;
-  required int32  currentWeight                     = 3;
-  required bool   hasStorage                        = 4;
-  required SlugQueryStorageMessage storage          = 5;
-  required bool   hasCapacitor                      = 6;
-  required SlugQueryCapacitorMessage capacitor      = 7;
-  required int32  armCount                          = 8;
-  required int32  legCount                          = 9;
-  required VectorMessage position                   = 10;
-  required VectorMessage moveTarget                 = 11;
-  required float acceleration                       = 12;
-  required float accelerationMax                    = 13;
-  required VectorMessage rotation                   = 14;
-  required float rotationRate                       = 15;
-  required VectorMessage rotationTarget             = 16;
-  required SlugQueryReactorMessage reactor          = 17;
-  required SlugQueryTorsoMessage torso              = 18;
-  required SlugQueryCockpitMessage cockpit          = 19;
-  repeated SlugQueryArmMessage arms                 = 20;
-  repeated SlugQueryLegMessage legs                 = 21;
+  required string state                        = 1;
+  required int32  maxWeight                    = 2;
+  required int32  currentWeight                = 3;
+  required bool   hasStorage                   = 4;
+  required SlugQueryStorageMessage storage     = 5;
+  required bool   hasCapacitor                 = 6;
+  required SlugQueryCapacitorMessage capacitor = 7;
+  required int32  armCount                     = 8;
+  required int32  legCount                     = 9;
+  required VectorMessage position              = 10;
+  required VectorMessage moveTarget            = 11;
+  required VectorMessage rotation              = 12;
+  required float rotationRate                  = 13;
+  required VectorMessage rotationTarget        = 14;
+  required SlugQueryReactorMessage reactor     = 15;
+  required SlugQueryTorsoMessage torso         = 16;
+  required SlugQueryCockpitMessage cockpit     = 17;
+  repeated SlugQueryArmMessage arms            = 18;
+  repeated SlugQueryLegMessage legs            = 19;
 }
