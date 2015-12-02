@@ -99,6 +99,7 @@ message SlugQuerySensorMessage {
   required float fov                              = 5;
   required bool occlusion                         = 6;
   required float refreshRate                      = 7;
+  repeated int32 activeTargets                    = 8;
 }
 
 message SlugQueryStorageMessage {
