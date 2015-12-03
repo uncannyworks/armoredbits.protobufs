@@ -1,0 +1,61 @@
+message SlugSetCommitArmCounterMeasureRequest {
+  required int32 counterMeasurePosition = 1;
+  required int32 state                  = 2;
+}
+
+message SlugSetCommitArmWeaponRequest {
+  required int32 weaponPosition = 1;
+  optional int32 state          = 2:
+  optional int32 fireState      = 3;
+}
+
+message SlugSetCommitChassisRequest {
+  required bool shutdown = 1;
+}
+
+message SlugSetCommitCockpitCommunicationRequest {
+  required int32 communicationPosition = 1;
+  optional int32 state                 = 2;
+  optional int32 channelNumber         = 3;
+  repeated byte channelData            = 4;
+}
+
+message SlugSetCommitCockpitComputerRequest {
+  required int32 computerPosition = 1;
+  optional int32 state            = 2;
+  optional int32 target           = 3;
+}
+
+message SlugSetCommitCockpitCounterMeasureRequest {
+  required int32 counterMeasurePosition = 1;
+  optional int32 state                  = 2; 
+}
+
+message SlugSetCommitCockpitSensorRequest {
+  required int32 sensorPosition = 1;
+  optional int32 state          = 2;
+}
+
+message SlugSetCommitEngineRequest {
+  optional int32 state        = 1;
+  optional int32 acceleration = 2;
+}
+
+message SlugSetCommitTorsoActuatorRequest {
+  optional int32 state   = 1;
+  optional bool reset    = 2;
+  optional float rotateX = 3;
+  optional float rotateY = 4;
+  optional float speed   = 5;
+}
+
+message SlugSetCommitTorsoCounterMeasureRequest {
+  required int32 counterMeasurePosition = 1;
+  required int32 state                  = 2;
+}
+
+message SlugSetCommitTorsoWeaponRequest {
+  required int32 weaponPosition = 1;
+  optional int32 state          = 2:
+  optional int32 fireState      = 3;
+}
