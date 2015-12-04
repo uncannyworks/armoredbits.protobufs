@@ -1,12 +1,14 @@
 message SlugSetCommitArmCounterMeasureRequest {
-  required int32 counterMeasurePosition = 1;
-  required int32 state                  = 2;
+  required int32 armPosition            = 1;
+  required int32 counterMeasurePosition = 2;
+  required int32 state                  = 3;
 }
 
 message SlugSetCommitArmWeaponRequest {
-  required int32 weaponPosition = 1;
-  optional int32 state          = 2:
-  optional int32 fireState      = 3;
+  required int32 armPosition    = 1;
+  required int32 weaponPosition = 2;
+  optional int32 state          = 3:
+  optional int32 fireState      = 4;
 }
 
 message SlugSetCommitChassisRequest {
