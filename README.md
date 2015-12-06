@@ -100,3 +100,17 @@ These are sent from the server to the 3d client.
 | 1    | ServerClientObjectSpawnMessage 
 | 2    | ServerClientObjectMoveMessage 
 | 3    | ServerClientObjectDestroyMessage 
+
+### Object Type Codes
+
+| Code | Type
+-------|------------
+| 1    | Mech1
+| 100  | Projectile1
+| 120  | Missile1
+| 140  | Rocket1
+| 160  | Mortar1
+| 180  | Beam1
+| 200  | Explosion1
+| 250  | Destroyed1
+| 251  | Despawned1

@@ -2,11 +2,10 @@ import "general.proto";
 
 message ServerClientObjectSpawnMessage {
   optional int32 playerId         = 1;
-  optional int32 typeId           = 2;
-  required int32 objectId         = 3;
-  required int32 objectType       = 4;
-  required VectorMessage position = 5;
-  required VectorMessage rotation = 6;
+  required int32 objectId         = 2;
+  required int32 objectType       = 3;
+  required VectorMessage position = 4;
+  required VectorMessage rotation = 5;
 }
 
 
