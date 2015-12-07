@@ -77,8 +77,8 @@ message SlugQueryEngineMessage {
   required ActiveComponentMessage activeComponent = 2;
   required float accelerationMax                  = 3;
   required float acceleration                     = 4;
-  required float speedMax                         = 5;
-  required float speedCurrent                     = 6;
+  required float velocityMax                      = 5;
+  required float velocity                         = 6;
 }
 
 message SlugQueryLegMessage {
