@@ -1,3 +1,5 @@
+import "general.proto";
+
 message SlugSetCommitArmCounterMeasureRequest {
   required int32 armPosition            = 1;
   required int32 counterMeasurePosition = 2;
@@ -12,7 +14,8 @@ message SlugSetCommitArmWeaponRequest {
 }
 
 message SlugSetCommitChassisRequest {
-  required bool shutdown = 1;
+  optional bool shutdown            = 1;
+  optional VectorMessage moveTarget = 2;
 }
 
 message SlugSetCommitCockpitCommunicationRequest {
