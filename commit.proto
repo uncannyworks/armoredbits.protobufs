@@ -14,8 +14,8 @@ message SlugSetCommitArmWeaponRequest {
 }
 
 message SlugSetCommitChassisRequest {
-  optional bool shutdown            = 1;
-  optional VectorMessage moveTarget = 2;
+  optional bool shutdown  = 1;
+  optional float rotation = 2;
 }
 
 message SlugSetCommitCockpitCommunicationRequest {
