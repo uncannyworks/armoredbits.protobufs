@@ -99,13 +99,12 @@ message SlugGetQueryWarMachineResponse {
   required int32  armCount                     = 8;
   required int32  legCount                     = 9;
   required VectorMessage position              = 10;
-  required VectorMessage moveTarget            = 11;
-  required VectorMessage rotation              = 12;
-  required float rotationRate                  = 13;
-  required VectorMessage rotationTarget        = 14;
-  required SlugQueryReactorMessage reactor     = 15;
-  required SlugQueryTorsoMessage torso         = 16;
-  required SlugQueryCockpitMessage cockpit     = 17;
-  repeated SlugQueryArmMessage arms            = 18;
-  repeated SlugQueryLegMessage legs            = 19;
+  required VectorMessage rotation              = 11;
+  required float rotationRate                  = 12;
+  required float rotationTarget                = 13;
+  required SlugQueryReactorMessage reactor     = 14;
+  required SlugQueryTorsoMessage torso         = 15;
+  required SlugQueryCockpitMessage cockpit     = 16;
+  repeated SlugQueryArmMessage arms            = 17;
+  repeated SlugQueryLegMessage legs            = 18;
 }
