@@ -12,7 +12,7 @@ message SlugQueryActuatorMessage {
 }
 
 message SlugQueryArmMessage {
-  required string index                                   = 1;
+  required int32 index                                    = 1;
   required string state                                   = 2;
   required bool hasStorage                                = 3;
   optional SlugQueryStorageMessage storage                = 4;
@@ -45,7 +45,7 @@ message SlugQueryCockpitMessage {
 }
 
 message SlugQueryComputerMessage {
-  required string index                            = 1;
+  required int32 index                             = 1;
   required string state                            = 2;
   required ActiveComponentMessage activeComponent  = 3;
   required int32 targetsMax                        = 4;
@@ -58,7 +58,7 @@ message SlugQueryComputerMessage {
 }
 
 message SlugQueryCommunicationMessage {
-  required string index                           = 1;
+  required int32 index                            = 1;
   required string state                           = 2;
   required ActiveComponentMessage activeComponent = 3;
   required string cType                           = 4;
@@ -70,7 +70,7 @@ message SlugQueryCommunicationMessage {
 }
 
 message SlugQueryCounterMeasureMessage {
-  required string index                           = 1;
+  required int32 index                            = 1;
   required string state                           = 2;
   required string cmType                          = 3;
   required ActiveComponentMessage activeComponent = 4;
@@ -86,7 +86,7 @@ message SlugQueryEngineMessage {
 }
 
 message SlugQueryLegMessage {
-  required string index                = 1;
+  required int32 index                 = 1;
   required string state                = 2;
   required SlugQueryArmorMessage armor = 3;
 }
@@ -97,7 +97,7 @@ message SlugQueryReactorMessage {
 }
 
 message SlugQuerySensorMessage {
-  required string index                           = 1;
+  required int32 index                            = 1;
   required string state                           = 2;
   required ActiveComponentMessage activeComponent = 3;
   required string sType                           = 4;
@@ -123,7 +123,7 @@ message SlugQueryTorsoMessage {
 }
 
 message SlugQueryWeaponMessage {
-  required string index                           = 1;
+  required int32 index                            = 1;
   required string state                           = 2;
   required ActiveComponentMessage activeComponent = 3;
   required string wType                           = 4;
