@@ -9,7 +9,7 @@ message SlugSetCommitArmCounterMeasureRequest {
 message SlugSetCommitArmWeaponRequest {
   required int32 armPosition    = 1;
   required int32 weaponPosition = 2;
-  optional int32 state          = 3:
+  optional int32 state          = 3;
   optional int32 fireState      = 4;
 }
 
@@ -61,6 +61,6 @@ message SlugSetCommitTorsoCounterMeasureRequest {
 
 message SlugSetCommitTorsoWeaponRequest {
   required int32 weaponPosition = 1;
-  optional int32 state          = 2:
+  optional int32 state          = 2;
   optional int32 fireState      = 3;
 }
