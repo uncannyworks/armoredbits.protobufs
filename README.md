@@ -1,9 +1,9 @@
-## Protocol Buffer Message Ids
+## Slug Codes
 
 | Code | Message                                   | Type
 -------|-------------------------------------------|----------
-|  1   | ServerStateMessage                        | Message
-| 10   | ServerWorldStateMessage                   | Message
+|  1   | ServerStateMessage                        | Shared
+|  2   | ServerWorldStateMessage                   | Shared
 | 20   | SlugConfigureChassisRequest               | Configure
 | 22   | SlugConfigureCockpitRequest               | Configure
 | 24   | SlugConfigureTorsoRequest                 | Configure
@@ -26,8 +26,6 @@
 | 101  | ServerSlugGenericResponse                 | Generic
 | 102  | SlugActionLoginRequest                    | Command
 | 103  | SlugActionLoginResponse                   | Command
-| 200  | ClientActionLoginRequest                  | Command
-| 201  | ClientActionLoginResponse                 | Command
 
 ## Server State Codes
 
@@ -95,11 +93,15 @@
 
 These are sent from the server to the 3d client.
 
-| Code | Message
--------|---------------------------------
-| 1    | ServerClientObjectSpawnMessage 
-| 2    | ServerClientObjectMoveMessage 
-| 3    | ServerClientObjectDestroyMessage 
+| Code | Message                          | Type
+-------|----------------------------------|------------
+|    1 | ServerStateMessage               | Shared
+|    2 | ServerWorldStateMessage          | Shared
+|    5 | ServerClientObjectSpawnMessage   | Simulation
+|    6 | ServerClientObjectMoveMessage    | Simulation
+|    7 | ServerClientObjectDestroyMessage | Simulation
+|  200 | ClientActionLoginRequest         | Command
+|  201 | ClientActionLoginResponse        | Command
 
 ### Object Type Codes
 
