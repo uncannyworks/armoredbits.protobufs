@@ -76,6 +76,7 @@ message SlugConfigureLegMessage {
 message SlugConfigureWeaponMessage {
   required string weaponModel    = 1;
   optional string capacitorModel = 2;
+  required string ammoModel      = 3;
 }
 
 message SlugConfigureDoneRequest {
