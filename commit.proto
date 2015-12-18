@@ -43,7 +43,7 @@ message SlugSetCommitCockpitSensorRequest {
 
 message SlugSetCommitEngineRequest {
   optional int32 state        = 1;
-  optional int32 acceleration = 2;
+  optional float acceleration = 2;
 }
 
 message SlugSetCommitTorsoActuatorRequest {
