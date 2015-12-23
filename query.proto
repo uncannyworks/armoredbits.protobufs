@@ -1,5 +1,10 @@
 import "general.proto";
 
+message ActiveTargetMessage {
+  required int32 targetId               = 1;
+  required VectorMessage targetPosition = 2;
+}
+
 message SlugQueryActuatorMessage {
   required string state                   = 1;
   required VectorMessage rotationMin      = 2;
@@ -105,7 +110,7 @@ message SlugQuerySensorMessage {
   required float fov                              = 6;
   required bool occlusion                         = 7;
   required float refreshRate                      = 8;
-  repeated int32 activeTargets                    = 9;
+  repeated ActiveTargetMessage activeTargets      = 9;
 }
 
 message SlugQueryStorageMessage {
