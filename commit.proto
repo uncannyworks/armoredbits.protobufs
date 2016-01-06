@@ -29,6 +29,9 @@ message SlugSetCommitCockpitComputerRequest {
   required int32 computerPosition = 1;
   optional int32 state            = 2;
   optional int32 target           = 3;
+  repeated int32 clearTargets     = 4;
+  optional bool clearPrimary      = 5;
+  optional bool clearLocked       = 6;
 }
 
 message SlugSetCommitCockpitCounterMeasureRequest {
