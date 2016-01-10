@@ -67,11 +67,12 @@ message SlugQueryCommunicationMessage {
   required string state                           = 2;
   required ActiveComponentMessage activeComponent = 3;
   required string cType                           = 4;
-  required int32 receiveRate                      = 5;
-  required int32 sendRate                         = 6;
+  required float receiveRate                      = 5;
+  required float sendRate                         = 6;
   required float maxRange                         = 7;
   required int32 channels                         = 8;
   required float delay                            = 9;
+  required int32 bufferSize                       = 10;
 }
 
 message SlugQueryCounterMeasureMessage {

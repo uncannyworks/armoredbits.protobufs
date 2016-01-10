@@ -22,7 +22,8 @@ message SlugSetCommitCockpitCommunicationRequest {
   required int32 communicationPosition = 1;
   optional int32 state                 = 2;
   optional int32 channelNumber         = 3;
-  repeated bytes channelData            = 4;
+  optional bytes channelData           = 4;
+  optional int32 targetUser            = 5;
 }
 
 message SlugSetCommitCockpitComputerRequest {

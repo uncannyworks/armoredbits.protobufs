@@ -9,6 +9,12 @@ message ServerWorldStateMessage {
   required int32 worldState = 1;
 }
 
+message ServerCommunicationMessage {
+  required int32 componentId = 1;
+  required int32 channel     = 2;
+  required bytes message     = 3;
+}
+
 message SlugActionLoginRequest {
   required string gameId   = 1;
   required string slugId   = 2;
