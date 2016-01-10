@@ -1,9 +1,10 @@
 ## Slug Codes
 
 | Code | Message                                   | Type
--------|-------------------------------------------|----------
+-------|-------------------------------------------|--------------
 |  1   | ServerStateMessage                        | Shared
 |  2   | ServerWorldStateMessage                   | Shared
+|  5   | ServerCommunicationMessage                | Communication
 | 20   | SlugConfigureChassisRequest               | Configure
 | 22   | SlugConfigureCockpitRequest               | Configure
 | 24   | SlugConfigureTorsoRequest                 | Configure
