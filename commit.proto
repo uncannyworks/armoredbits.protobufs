@@ -1,70 +1,65 @@
 import "general.proto";
 
-message SlugSetCommitArmCounterMeasureRequest {
-  required int32 armPosition            = 1;
-  required int32 counterMeasurePosition = 2;
-  required int32 state                  = 3;
+message SlugCommitActuatorRequest {
+  required int32 component  = 1;
+  required int32 parentId   = 2;
+  required int32 actuatorId = 3;
+  optional int32 state      = 4;
+  optional bool reset       = 5;
+  optional float rotateX    = 6;
+  optional float rotateY    = 7;
+  optional float speed      = 8;
 }
 
-message SlugSetCommitArmWeaponRequest {
-  required int32 armPosition    = 1;
-  required int32 weaponPosition = 2;
-  optional int32 state          = 3;
-  optional int32 fireState      = 4;
+message SlugCommitCommunicationRequest {
+  required int32 component       = 1;
+  required int32 parentId        = 2;
+  required int32 communicationId = 3;
+  optional int32 state           = 4;
+  optional int32 channelNumber   = 5;
+  optional bytes channelData     = 6;
+  optional int32 targetUser      = 7;
 }
 
-message SlugSetCommitChassisRequest {
-  optional bool shutdown  = 1;
-  optional float rotation = 2;
+message SlugCommitComputerRequest {
+  required int32 component    = 1;
+  required int32 parentId     = 2;
+  required int32 computerId   = 3;
+  optional int32 state        = 4;
+  optional int32 target       = 5;
+  repeated int32 clearTargets = 6;
+  optional bool clearPrimary  = 7;
+  optional bool clearLocked   = 8;
 }
 
-message SlugSetCommitCockpitCommunicationRequest {
-  required int32 communicationPosition = 1;
-  optional int32 state                 = 2;
-  optional int32 channelNumber         = 3;
-  optional bytes channelData           = 4;
-  optional int32 targetUser            = 5;
+message SlugCommitCounterMeasureRequest {
+  required int32 component       = 1;
+  required int32 parentId        = 2;
+  required int32 communicationId = 3;
+  required int32 state           = 4;
 }
 
-message SlugSetCommitCockpitComputerRequest {
-  required int32 computerPosition = 1;
-  optional int32 state            = 2;
-  optional int32 target           = 3;
-  repeated int32 clearTargets     = 4;
-  optional bool clearPrimary      = 5;
-  optional bool clearLocked       = 6;
-}
-
-message SlugSetCommitCockpitCounterMeasureRequest {
-  required int32 counterMeasurePosition = 1;
-  optional int32 state                  = 2; 
-}
-
-message SlugSetCommitCockpitSensorRequest {
-  required int32 sensorPosition = 1;
-  optional int32 state          = 2;
-}
-
-message SlugSetCommitEngineRequest {
+message SlugCommitEngineRequest {
   optional int32 state        = 1;
   optional float acceleration = 2;
 }
 
-message SlugSetCommitTorsoActuatorRequest {
-  optional int32 state   = 1;
-  optional bool reset    = 2;
-  optional float rotateX = 3;
-  optional float rotateY = 4;
-  optional float speed   = 5;
+message SlugCommitMechRequest {
+  optional bool shutdown  = 1;
+  optional float rotation = 2;
 }
 
-message SlugSetCommitTorsoCounterMeasureRequest {
-  required int32 counterMeasurePosition = 1;
-  required int32 state                  = 2;
+message SlugCommitSensorRequest {
+  required int32 component = 1;
+  required int32 parentId  = 2;
+  required int32 sensorId  = 3;
+  optional int32 state     = 4;
 }
 
-message SlugSetCommitTorsoWeaponRequest {
-  required int32 weaponPosition = 1;
-  optional int32 state          = 2;
-  optional int32 fireState      = 3;
+message SlugCommitWeaponRequest {
+  required int32 component = 1;
+  required int32 parentId  = 2;
+  required int32 weaponId  = 3;
+  optional int32 state     = 4;
+  optional int32 fireState = 5;
 }

@@ -1,32 +1,29 @@
 ## Slug Codes
 
-| Code | Message                                   | Type
--------|-------------------------------------------|--------------
-|  1   | ServerStateMessage                        | Shared
-|  2   | ServerWorldStateMessage                   | Shared
-|  5   | ServerCommunicationMessage                | Communication
-| 20   | SlugConfigureChassisRequest               | Configure
-| 22   | SlugConfigureCockpitRequest               | Configure
-| 24   | SlugConfigureTorsoRequest                 | Configure
-| 26   | SlugConfigureArmsRequest                  | Configure
-| 28   | SlugConfigureLegsRequest                  | Configure
-| 30   | SlugConfigureDoneRequest                  | Configure
-| 50   | SlugGetQueryWarMachineRequest             | Query
-| 51   | SlugGetQueryWarMachineReponse             | Query
-| 60   | SlugSetCommitArmCounterMeasureRequest     | Commit
-| 62   | SlugSetCommitArmWeaponRequest             | Commit
-| 64   | SlugSetCommitChassisRequest               | Commit
-| 66   | SlugSetCommitCockpitCommunicationRequest  | Commit
-| 68   | SlugSetCommitCockpitComputerRequest       | Commit
-| 70   | SlugSetCommitCockpitCounterMeasureRequest | Commit
-| 72   | SlugSetCommitCockpitSensorRequest         | Commit
-| 74   | SlugSetCommitEngineRequest                | Commit
-| 76   | SlugSetCommitTorsoActuatorRequest         | Commit
-| 78   | SlugSetCommitTorsoCounterMeasureRequest   | Commit
-| 80   | SlugSetCommitTorsoWeaponRequest           | Commit
-| 101  | ServerSlugGenericResponse                 | Generic
-| 102  | SlugActionLoginRequest                    | Command
-| 103  | SlugActionLoginResponse                   | Command
+| Code | Message                         | Type
+-------|---------------------------------|--------------
+|  1   | ServerStateMessage              | Shared
+|  2   | ServerWorldStateMessage         | Shared
+|  5   | ServerCommunicationMessage      | Communication
+| 20   | SlugConfigureChassisRequest     | Configure
+| 22   | SlugConfigureCockpitRequest     | Configure
+| 24   | SlugConfigureTorsoRequest       | Configure
+| 26   | SlugConfigureArmsRequest        | Configure
+| 28   | SlugConfigureLegsRequest        | Configure
+| 30   | SlugConfigureDoneRequest        | Configure
+| 50   | SlugQueryMechRequest            | Query
+| 51   | SlugQueryMechReponse            | Query
+| 60   | SlugCommitCounterMeasureMessage | Commit
+| 62   | SlugCommitWeaponRequest         | Commit
+| 64   | SlugCommitMechRequest           | Commit
+| 66   | SlugCommitCommunicationRequest  | Commit
+| 68   | SlugCommitComputerRequest       | Commit
+| 70   | SlugCommitSensorRequest         | Commit
+| 72   | SlugCommitEngineRequest         | Commit
+| 74   | SlugCommitActuatorRequest       | Commit
+| 101  | ServerSlugGenericResponse       | Generic
+| 102  | SlugActionLoginRequest          | Command
+| 103  | SlugActionLoginResponse         | Command
 
 ## Server State Codes
 
