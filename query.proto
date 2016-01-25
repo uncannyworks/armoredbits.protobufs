@@ -43,27 +43,29 @@ message SlugQueryCockpitMessage {
 }
 
 message SlugQueryCommunicationMessage {
-  required string state                           = 1;
-  required ActiveComponentMessage activeComponent = 2;
-  required string cType                           = 3;
-  required float receiveRate                      = 4;
-  required float sendRate                         = 5;
-  required float maxRange                         = 6;
-  required int32 channels                         = 7;
-  required float delay                            = 8;
-  required int32 bufferSize                       = 9;
+  required int32 index                            = 1;
+  required string state                           = 2;
+  required ActiveComponentMessage activeComponent = 3;
+  required string cType                           = 4;
+  required float receiveRate                      = 5;
+  required float sendRate                         = 6;
+  required float maxRange                         = 7;
+  required int32 channels                         = 8;
+  required float delay                            = 9;
+  required int32 bufferSize                       = 10;
 }
 
 message SlugQueryComputerMessage {
-  required string state                           = 1;
-  required ActiveComponentMessage activeComponent = 2;
-  required int32 targetsMax                       = 3;
-  repeated int32 targetsLocked                    = 4;
-  required int32 targetPrimary                    = 5;
-  required int32 targetLockNew                    = 6;
-  required float targetLockOnTime                 = 7;
-  required float targetLockTime                   = 8;
-  repeated int32 teamMechs                        = 9;
+  required int32 index                            = 1;
+  required string state                           = 2;
+  required ActiveComponentMessage activeComponent = 3;
+  required int32 targetsMax                       = 4;
+  repeated int32 targetsLocked                    = 5;
+  required int32 targetPrimary                    = 6;
+  required int32 targetLockNew                    = 7;
+  required float targetLockOnTime                 = 8;
+  required float targetLockTime                   = 9;
+  repeated int32 teamMechs                        = 10;
 }
 
 message SlugQueryCounterMeasureMessage {
