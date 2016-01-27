@@ -45,8 +45,12 @@ message SlugCommitEngineRequest {
 }
 
 message SlugCommitMechRequest {
-  optional bool shutdown  = 1;
-  optional float rotation = 2;
+  optional bool shutdown       = 1;
+  optional float rotation      = 2;
+  optional int32 actuatorState = 3;
+  optional float actuatorX     = 4;
+  optional float actuatorY     = 5;
+  optional float actuatorSpeed = 6;
 }
 
 message SlugCommitSensorRequest {
