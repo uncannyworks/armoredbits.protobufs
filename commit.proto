@@ -5,10 +5,9 @@ message SlugCommitActuatorRequest {
   required int32 parentId   = 2;
   required int32 actuatorId = 3;
   optional int32 state      = 4;
-  optional bool reset       = 5;
-  optional float rotateX    = 6;
-  optional float rotateY    = 7;
-  optional float speed      = 8;
+  optional float rotateX    = 5;
+  optional float rotateY    = 6;
+  optional float speed      = 7;
 }
 
 message SlugCommitCommunicationRequest {
@@ -45,12 +44,8 @@ message SlugCommitEngineRequest {
 }
 
 message SlugCommitMechRequest {
-  optional bool shutdown       = 1;
-  optional float rotation      = 2;
-  optional int32 actuatorState = 3;
-  optional float actuatorX     = 4;
-  optional float actuatorY     = 5;
-  optional float actuatorSpeed = 6;
+  optional bool shutdown  = 1;
+  optional float rotation = 2;
 }
 
 message SlugCommitSensorRequest {
