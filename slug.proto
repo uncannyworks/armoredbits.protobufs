@@ -70,13 +70,14 @@ message SlugConfigureWeaponMessage {
 }
 
 message SlugConfigureMechRequest {
-  required string model                          = 1;
-  optional string capacitorModel                 = 2;
-  required string gyroModel                      = 3;
-  required string reactorModel                   = 4;
-  required SlugConfigureTorsoMessage torsoConfig = 5;
-  repeated SlugConfigureArmMessage armsConfig    = 6;
-  repeated SlugConfigureLegMessage legsConfig    = 7;
+  required string model                              = 1;
+  optional string capacitorModel                     = 2;
+  required string gyroModel                          = 3;
+  required string reactorModel                       = 4;
+  required SlugConfigureTorsoMessage torsoConfig     = 5;
+  repeated SlugConfigureCockpitMessage cockpitConfig = 6;
+  repeated SlugConfigureArmMessage armsConfig        = 7;
+  repeated SlugConfigureLegMessage legsConfig        = 8;
 }
 
 message SlugConfigureDoneRequest {
@@ -86,30 +87,30 @@ message SlugConfigureDoneRequest {
 // Query
 
 // empty message
-// message SlugGetQueryWarMachineRequest {
+// message SlugQueryMechRequest {
 // }
 
-message SlugGetQueryWarMachineResponse {
+message SlugQueryMechResponse {
   required string state                           = 1;
   required int32  maxWeight                       = 2;
   required int32  currentWeight                   = 3;
   required VectorMessage position                 = 4;
   required VectorMessage rotation                 = 5;
   required float rotationRate                     = 6;
-  repeated SlugQueryActuatorMessage arms          = 7;
+  repeated SlugQueryActuatorMessage actuators     = 7;
   repeated SlugQueryArmMessage arms               = 8;
   repeated SlugQueryArmorMessage armors           = 9;
-  repeated SlugQueryCapacitorMessage capacitor    = 10;
-  required SlugQueryCockpitMessage storage        = 11;
-  repeated SlugQueryCommunicationMessage storage  = 12;
-  repeated SlugQueryComputerMessage storage       = 13;
-  repeated SlugQueryCounterMeasureMessage storage = 14;
-  required SlugQueryEngineMessage storage         = 15;
-  required SlugQueryGyroMessage storage           = 16;
+  repeated SlugQueryCapacitorMessage capacitors   = 10;
+  required SlugQueryCockpitMessage cockpit        = 11;
+  repeated SlugQueryCommunicationMessage communicaitons   = 12;
+  repeated SlugQueryComputerMessage computers     = 13;
+  repeated SlugQueryCounterMeasureMessage counterMeasures = 14;
+  required SlugQueryEngineMessage engine          = 15;
+  required SlugQueryGyroMessage gyro              = 16;
   repeated SlugQueryLegMessage legs               = 17;
-  repeated SlugQuerySensorMessage storage         = 18;
-  repeated SlugQueryStorageMessage storage        = 19;
+  repeated SlugQuerySensorMessage sensors         = 18;
+  repeated SlugQueryStorageMessage storages       = 19;
   required SlugQueryReactorMessage reactor        = 20;
   required SlugQueryTorsoMessage torso            = 21;
-  repeated SlugQueryweaponMessage cockpit         = 22;
+  repeated SlugQueryWeaponMessage weapons         = 22;
 }

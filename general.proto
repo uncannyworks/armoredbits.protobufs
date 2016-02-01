@@ -10,8 +10,8 @@ message ActiveComponentMessage {
   required int32 powerDrawActive = 3;
 }
 
-message SlugQueryLocationmessage {
-  requierd string locationType = 1;
+message SlugQueryLocationMessage {
+  required string locationType = 1;
   required int32 locationId    = 2;
   required int32 positionId    = 3;
 }
