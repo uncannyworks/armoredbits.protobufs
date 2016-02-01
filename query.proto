@@ -6,14 +6,15 @@ message ActiveTargetMessage {
 }
 
 message SlugQueryActuatorMessage {
-  required string state                   = 1;
-  required VectorMessage rotationMin      = 2;
-  required VectorMessage rotationMax      = 3;
-  required VectorMessage rotationDefault  = 4;
-  required VectorMessage rotationCurrent  = 5;
-  required VectorMessage rotationTarget   = 6;
-  required VectorMessage rotationSpeedMax = 7;
-  required VectorMessage rotationSpeed    = 8;
+  required string state                      = 1;
+  required SlugQueryLocationMessage location = 2;
+  required VectorMessage rotationMin         = 3;
+  required VectorMessage rotationMax         = 4;
+  required VectorMessage rotationDefault     = 5;
+  required VectorMessage rotationCurrent     = 6;
+  required VectorMessage rotationTarget      = 7;
+  required float rotationSpeedMax            = 8;
+  required float rotationSpeed               = 9;
 }
 
 message SlugQueryArmMessage {
