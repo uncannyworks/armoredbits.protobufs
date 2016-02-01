@@ -32,10 +32,10 @@ message SlugCommitComputerRequest {
 }
 
 message SlugCommitCounterMeasureRequest {
-  required int32 component       = 1;
-  required int32 parentId        = 2;
-  required int32 communicationId = 3;
-  required int32 state           = 4;
+  required int32 component        = 1;
+  required int32 parentId         = 2;
+  required int32 counterMeasureId = 3;
+  required int32 state            = 4;
 }
 
 message SlugCommitEngineRequest {
