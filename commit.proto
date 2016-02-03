@@ -1,41 +1,33 @@
 import "general.proto";
 
 message SlugCommitActuatorRequest {
-  required int32 component  = 1;
-  required int32 parentId   = 2;
-  required int32 actuatorId = 3;
-  optional int32 state      = 4;
-  optional float rotateX    = 5;
-  optional float rotateY    = 6;
-  optional float speed      = 7;
+  required SlugQueryLocationMessage location = 1;
+  optional int32 state                       = 2;
+  optional float rotateX                     = 3;
+  optional float rotateY                     = 4;
+  optional float speed                       = 5;
 }
 
 message SlugCommitCommunicationRequest {
-  required int32 component       = 1;
-  required int32 parentId        = 2;
-  required int32 communicationId = 3;
-  optional int32 state           = 4;
-  optional int32 channelNumber   = 5;
-  optional bytes channelData     = 6;
-  optional int32 targetUser      = 7;
+  required SlugQueryLocationMessage location = 1;
+  optional int32 state                       = 2;
+  optional int32 channelNumber               = 3;
+  optional bytes channelData                 = 4;
+  optional int32 targetUser                  = 5;
 }
 
 message SlugCommitComputerRequest {
-  required int32 component    = 1;
-  required int32 parentId     = 2;
-  required int32 computerId   = 3;
-  optional int32 state        = 4;
-  optional int32 target       = 5;
-  repeated int32 clearTargets = 6;
-  optional bool clearPrimary  = 7;
-  optional bool clearLocked   = 8;
+  required SlugQueryLocationMessage location = 1;
+  optional int32 state                       = 2;
+  optional int32 target                      = 3;
+  repeated int32 clearTargets                = 4;
+  optional bool clearPrimary                 = 5;
+  optional bool clearLocked                  = 6;
 }
 
 message SlugCommitCounterMeasureRequest {
-  required int32 component        = 1;
-  required int32 parentId         = 2;
-  required int32 counterMeasureId = 3;
-  required int32 state            = 4;
+  required SlugQueryLocationMessage location = 1;
+  required int32 state                       = 2;
 }
 
 message SlugCommitEngineRequest {
@@ -49,16 +41,12 @@ message SlugCommitMechRequest {
 }
 
 message SlugCommitSensorRequest {
-  required int32 component = 1;
-  required int32 parentId  = 2;
-  required int32 sensorId  = 3;
-  optional int32 state     = 4;
+  required SlugQueryLocationMessage location = 1;
+  optional int32 state                       = 2;
 }
 
 message SlugCommitWeaponRequest {
-  required int32 component = 1;
-  required int32 parentId  = 2;
-  required int32 weaponId  = 3;
-  optional int32 state     = 4;
-  optional int32 fireState = 5;
+  required SlugQueryLocationMessage location = 1;
+  optional int32 state                       = 2;
+  optional int32 fireState                   = 3;
 }

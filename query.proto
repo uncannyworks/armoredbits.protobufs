@@ -6,7 +6,7 @@ message ActiveTargetMessage {
 }
 
 message SlugQueryActuatorMessage {
-  required string state                      = 1;
+  required int32 state                       = 1;
   required SlugQueryLocationMessage location = 2;
   required VectorMessage rotationMin         = 3;
   required VectorMessage rotationMax         = 4;
@@ -19,7 +19,7 @@ message SlugQueryActuatorMessage {
 
 message SlugQueryArmMessage {
   required int32 index     = 1;
-  required string state    = 2;
+  required int32 state    = 2;
   required bool hasStorage = 3;
 }
 
@@ -33,21 +33,21 @@ message SlugQueryArmorMessage {
 
 message SlugQueryCapacitorMessage {
   required SlugQueryLocationMessage location = 1;
-  required string state                      = 2;
+  required int32 state                       = 2;
   required int32 capacity                    = 3;
   required float chargeRate                  = 4;
   required int32 chargeAmount                = 5;
 }
 
 message SlugQueryCockpitMessage {
-  required string state = 1;
+  required int32 state = 1;
 }
 
 message SlugQueryCommunicationMessage {
   required int32 index                            = 1;
-  required string state                           = 2;
+  required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
-  required string cType                           = 4;
+  required int32 cType                            = 4;
   required float receiveRate                      = 5;
   required float sendRate                         = 6;
   required float maxRange                         = 7;
@@ -58,7 +58,7 @@ message SlugQueryCommunicationMessage {
 
 message SlugQueryComputerMessage {
   required int32 index                            = 1;
-  required string state                           = 2;
+  required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
   required int32 targetsMax                       = 4;
   repeated int32 targetsLocked                    = 5;
@@ -71,36 +71,36 @@ message SlugQueryComputerMessage {
 
 message SlugQueryCounterMeasureMessage {
   required int32 index                            = 1;
-  required string state                           = 2;
-  required string cmType                          = 3;
+  required int32 state                            = 2;
+  required int32 cmType                           = 3;
   required ActiveComponentMessage activeComponent = 4;
 }
 
 message SlugQueryEngineMessage {
-  required string state                           = 1;
+  required int32 state                            = 1;
   required ActiveComponentMessage activeComponent = 2;
 }
 
 message SlugQueryGyroMessage {
-  required string state = 1;
+  required int32 state = 1;
 }
 
 message SlugQueryLegMessage {
   required int32 index                 = 1;
-  required string state                = 2;
+  required int32 state                 = 2;
   required SlugQueryArmorMessage armor = 3;
 }
 
 message SlugQueryReactorMessage {
-  required string state = 1;
+  required int32 state  = 1;
   required int32 output = 2;
 }
 
 message SlugQuerySensorMessage {
   required int32 index                            = 1;
-  required string state                           = 2;
+  required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
-  required string sType                           = 4;
+  required int32 sType                            = 4;
   required float maxRange                         = 5;
   required float fov                              = 6;
   required bool occlusion                         = 7;
@@ -114,14 +114,14 @@ message SlugQueryStorageMessage {
 }
 
 message SlugQueryTorsoMessage {
-  required string state = 1;
+  required int32 state = 1;
 }
 
 message SlugQueryWeaponMessage {
   required SlugQueryLocationMessage location      = 1;
-  required string state                           = 2;
+  required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
-  required string fireState                       = 4;  
+  required int32 fireState                        = 4;  
   required bool hasCapacitor                      = 5;
   required float fireRate                         = 6; 
   required float firedLast                        = 7; 
