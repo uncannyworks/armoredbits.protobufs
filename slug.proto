@@ -91,7 +91,7 @@ message SlugConfigureDoneRequest {
 // }
 
 message SlugQueryMechResponse {
-  required string state                           = 1;
+  required int32 state                            = 1;
   required int32  maxWeight                       = 2;
   required int32  currentWeight                   = 3;
   required VectorMessage position                 = 4;
