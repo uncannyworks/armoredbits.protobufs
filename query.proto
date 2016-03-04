@@ -44,7 +44,7 @@ message SlugQueryCockpitMessage {
 }
 
 message SlugQueryCommunicationMessage {
-  required int32 index                            = 1;
+  required SlugQueryLocationMessage location      = 1;
   required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
   required int32 cType                            = 4;
@@ -57,7 +57,7 @@ message SlugQueryCommunicationMessage {
 }
 
 message SlugQueryComputerMessage {
-  required int32 index                            = 1;
+  required SlugQueryLocationMessage location      = 1;
   required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
   required int32 targetsMax                       = 4;
@@ -70,7 +70,7 @@ message SlugQueryComputerMessage {
 }
 
 message SlugQueryCounterMeasureMessage {
-  required int32 index                            = 1;
+  required SlugQueryLocationMessage location      = 1;
   required int32 state                            = 2;
   required int32 cmType                           = 3;
   required ActiveComponentMessage activeComponent = 4;
@@ -97,7 +97,7 @@ message SlugQueryReactorMessage {
 }
 
 message SlugQuerySensorMessage {
-  required int32 index                            = 1;
+  required SlugQueryLocationMessage location      = 1;
   required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
   required int32 sType                            = 4;
