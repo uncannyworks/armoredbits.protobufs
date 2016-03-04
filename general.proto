@@ -12,7 +12,7 @@ message ActiveComponentMessage {
 }
 
 message SlugQueryLocationMessage {
-  required string locationType = 1;
-  required int32 locationId    = 2;
-  required int32 positionId    = 3;
+  required int32 locationType = 1;
+  required int32 locationId   = 2;
+  required int32 positionId   = 3;
 }
