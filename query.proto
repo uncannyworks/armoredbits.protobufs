@@ -139,3 +139,32 @@ message SlugQueryWeaponMessage {
   required float damageHigh                       = 19;
   required int32 firedCount                       = 20;
 }
+
+// empty message
+// message SlugQueryMechRequest {
+// }
+
+message SlugQueryMechResponse {
+  required int32 state                            = 1;
+  required int32  maxWeight                       = 2;
+  required int32  currentWeight                   = 3;
+  required VectorMessage position                 = 4;
+  required VectorMessage rotation                 = 5;
+  required float rotationRate                     = 6;
+  repeated SlugQueryActuatorMessage actuators     = 7;
+  repeated SlugQueryArmMessage arms               = 8;
+  repeated SlugQueryArmorMessage armors           = 9;
+  repeated SlugQueryCapacitorMessage capacitors   = 10;
+  required SlugQueryCockpitMessage cockpit        = 11;
+  repeated SlugQueryCommunicationMessage communications   = 12;
+  repeated SlugQueryComputerMessage computers     = 13;
+  repeated SlugQueryCounterMeasureMessage counterMeasures = 14;
+  required SlugQueryEngineMessage engine          = 15;
+  required SlugQueryGyroMessage gyro              = 16;
+  repeated SlugQueryLegMessage legs               = 17;
+  repeated SlugQuerySensorMessage sensors         = 18;
+  repeated SlugQueryStorageMessage storages       = 19;
+  required SlugQueryReactorMessage reactor        = 20;
+  required SlugQueryTorsoMessage torso            = 21;
+  repeated SlugQueryWeaponMessage weapons         = 22;
+}

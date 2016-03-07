@@ -1,0 +1,31 @@
+import "general.proto";
+
+message ServerStateMessage {
+  required int32 serverState = 1;
+}
+
+message ServerWorldStateMessage {
+  required int32 worldState = 1;
+}
+
+message ServerCommunicationMessage {
+  required int32 componentId = 1;
+  required int32 channel     = 2;
+  required bytes message     = 3;
+}
+
+message SlugActionLoginRequest {
+  required string gameId   = 1;
+  required string slugId   = 2;
+  required string userName = 3;
+}
+
+// empty message
+// message SlugActionLoginResponse {
+// }
+
+message ServerSlugGenericResponse {
+  required int32 response = 1;
+  optional int32 error    = 2;
+  required int32 msgId    = 3;
+}

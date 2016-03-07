@@ -1,0 +1,52 @@
+import "general.proto";
+
+message SlugConfigureArmMessage {
+  required string armModel                    = 1;
+  required string armorModel                  = 2;
+  repeated SlugConfigureWeaponMessage weapons = 3;
+  repeated string counterMeasureModels        = 4;
+}
+
+message SlugConfigureCockpitMessage {
+  required string cockpitModel         = 1;
+  repeated string computerModels       = 2;
+  repeated string sensorModels         = 3;
+  repeated string communicationModels  = 4;
+  required string armorModel           = 5;
+  repeated string counterMeasureModels = 6;
+}
+
+message SlugConfigureLegMessage {
+  required string legModel    = 1;
+  required string armorModel  = 2;
+}
+
+message SlugConfigureTorsoMessage  {
+  required string torsoModel                  = 1;
+  required string engineModel                 = 2;
+  required string armorModel                  = 3;
+  repeated SlugConfigureWeaponMessage weapons = 4;
+  repeated string counterMeasureModels        = 5;
+  required string actuatorModel               = 6;
+}
+ 
+message SlugConfigureWeaponMessage {
+  required string weaponModel    = 1;
+  optional string capacitorModel = 2;
+  required string ammoModel      = 3;
+}
+
+message SlugConfigureMechRequest {
+  required string model                              = 1;
+  optional string capacitorModel                     = 2;
+  required string gyroModel                          = 3;
+  required string reactorModel                       = 4;
+  required SlugConfigureTorsoMessage torsoConfig     = 5;
+  repeated SlugConfigureCockpitMessage cockpitConfig = 6;
+  repeated SlugConfigureArmMessage armsConfig        = 7;
+  repeated SlugConfigureLegMessage legsConfig        = 8;
+}
+
+message SlugConfigureDoneRequest {
+  required bool preset = 1;
+}
