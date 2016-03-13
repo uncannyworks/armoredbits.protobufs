@@ -2,13 +2,10 @@ import "general.proto";
 import "configure.proto";
 
 message ServerClientObjectSpawnMessage {
-  required int32 objectId                    = 1;
-  required int32 objectType                  = 2;
-  optional int32 objectSubType               = 3;
-  required VectorMessage position            = 4;
-  required VectorMessage rotation            = 5;
-  optional string playerId                   = 6;
-  optional SlugConfigureMechRequest mechData = 7;
+  required int32 objectId          = 1;
+  required int32 objectType        = 2;
+  required VectorMessage position  = 3;
+  required VectorMessage rotation  = 4;
 }
 
 
