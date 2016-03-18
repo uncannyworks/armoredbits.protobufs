@@ -6,6 +6,8 @@ message ServerClientObjectSpawnMessage {
   required int32 objectType        = 2;
   required VectorMessage position  = 3;
   required VectorMessage rotation  = 4;
+  optional int32 userId            = 5;
+  optional SlugQueryMechResponse   = 6;
 }
 
 
