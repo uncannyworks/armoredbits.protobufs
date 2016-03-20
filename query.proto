@@ -5,6 +5,12 @@ message ActiveTargetMessage {
   required VectorMessage targetPosition = 2;
 }
 
+message SlugQueryLocationMessage {
+  required int32 locationType = 1;
+  required int32 locationId   = 2;
+  required int32 positionId   = 3;
+}
+
 message SlugQueryActuatorMessage {
   required int32 state                       = 1;
   required SlugQueryLocationMessage location = 2;

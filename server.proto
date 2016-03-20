@@ -29,3 +29,7 @@ message ServerSlugGenericResponse {
   optional int32 error    = 2;
   required int32 msgId    = 3;
 }
+
+message ServerSlugOOBMessage {
+  required float timeLeft = 1;
+}
