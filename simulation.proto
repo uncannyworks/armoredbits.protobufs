@@ -12,7 +12,7 @@ message ServerClientObjectSpawnMessage {
   required VectorMessage position         = 3;
   required VectorMessage rotation         = 4;
   optional int32 userId                   = 5;
-  optional SlugQueryMechResponse          = 6;
+  optional SlugConfigureMechRequest       = 6;
   optional ObjectSpawnpParent spawnParent = 7;
 }
 
