@@ -6,6 +6,7 @@ message ObjectSpawnParent {
   required int32 ospWeaponId = 2;
 }
 
+// 5
 message ServerClientObjectSpawnMessage {
   required int32 objectId                    = 1;
   required int32 objectType                  = 2;
@@ -13,17 +14,25 @@ message ServerClientObjectSpawnMessage {
   required VectorMessage rotation            = 4;
   optional int32 userId                      = 5;
   optional SlugConfigureMechRequest mechData = 6;
-  optional ObjectSpawnParent spawnParent    = 7;
+  optional ObjectSpawnParent spawnParent     = 7;
 }
 
-
+// 6
 message ServerClientObjectMoveMessage {
   required int32         objectId = 1;
   required VectorMessage position = 2;
   required VectorMessage rotation = 3;
 }
 
+// 7
 message ServerClientObjectDestroyMessage {
   required int32 objectId   = 1;
   required int32 objectType = 2;
 }
+
+// 8
+message ServerClientMechUpdateMessage {
+  required int32 mechUpdateId                   = 1;
+  required SlugQueryMechResponse mechUpdateData = 2;
+}
+
