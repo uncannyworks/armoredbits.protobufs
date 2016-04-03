@@ -1,13 +1,19 @@
 import "general.proto";
 import "configure.proto";
 
+message ObjectSpawnParent {
+  required int32 ospParentId = 1;
+  required int32 ospWeaponId = 2;
+}
+
 message ServerClientObjectSpawnMessage {
-  required int32 objectId          = 1;
-  required int32 objectType        = 2;
-  required VectorMessage position  = 3;
-  required VectorMessage rotation  = 4;
-  optional int32 userId            = 5;
-  optional SlugQueryMechResponse   = 6;
+  required int32 objectId                 = 1;
+  required int32 objectType               = 2;
+  required VectorMessage position         = 3;
+  required VectorMessage rotation         = 4;
+  optional int32 userId                   = 5;
+  optional SlugQueryMechResponse          = 6;
+  optional ObjectSpawnpParent spawnParent = 7;
 }
 
 
