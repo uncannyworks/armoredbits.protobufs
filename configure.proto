@@ -36,6 +36,7 @@ message SlugConfigureWeaponMessage {
   required string weaponModel    = 1;
   optional string capacitorModel = 2;
   required string ammoModel      = 3;
+  required string weaponProtocol = 4;
 }
 
 message SlugConfigureMechRequest {
