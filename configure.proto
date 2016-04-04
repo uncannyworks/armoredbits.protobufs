@@ -5,6 +5,7 @@ message SlugConfigureArmMessage {
   required string armorModel                  = 2;
   repeated SlugConfigureWeaponMessage weapons = 3;
   repeated string counterMeasureModels        = 4;
+  required string armProtocol                 = 5;
 }
 
 message SlugConfigureCockpitMessage {
@@ -19,6 +20,7 @@ message SlugConfigureCockpitMessage {
 message SlugConfigureLegMessage {
   required string legModel    = 1;
   required string armorModel  = 2;
+  required string legProtocol = 3;
 }
 
 message SlugConfigureTorsoMessage  {
