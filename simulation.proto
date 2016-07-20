@@ -8,13 +8,14 @@ message ObjectSpawnParent {
 
 // 5
 message ServerClientObjectSpawnMessage {
-  required int32 objectId                    = 1;
-  required int32 objectType                  = 2;
-  required VectorMessage position            = 3;
-  required VectorMessage rotation            = 4;
-  optional int32 userId                      = 5;
-  optional SlugConfigureMechRequest mechData = 6;
-  optional ObjectSpawnParent spawnParent     = 7;
+  required int32 objectId                      = 1;
+  required int32 objectType                    = 2;
+  required VectorMessage position              = 3;
+  required VectorMessage rotation              = 4;
+  optional int32 userId                        = 5;
+  optional SlugConfigureMechRequest mechConfig = 6;
+  optional SlugQueryMechResponse mechQuery     = 7;
+  optional ObjectSpawnParent spawnParent       = 8;
 }
 
 // 6
