@@ -26,10 +26,10 @@ message SlugQueryActuatorMessage {
 }
 
 message SlugQueryArmMessage {
-  required SlugQueryLocationMessage = 1;
-  required int32 index              = 2;
-  required int32 state              = 3;
-  required bool hasStorage          = 4;
+  required SlugQueryLocationMessage location = 1;
+  required int32 index                       = 2;
+  required int32 state                       = 3;
+  required bool hasStorage                   = 4;
 }
 
 message SlugQueryArmorMessage {
@@ -130,10 +130,10 @@ message SlugQueryWeaponMessage {
   required SlugQueryLocationMessage location      = 1;
   required int32 state                            = 2;
   required ActiveComponentMessage activeComponent = 3;
-  required int32 fireState                        = 4;  
+  required int32 fireState                        = 4;
   required bool hasCapacitor                      = 5;
-  required float fireRate                         = 6; 
-  required float firedLast                        = 7; 
+  required float fireRate                         = 6;
+  required float firedLast                        = 7;
   required int32 ammoMax                          = 8;
   required int32 ammoCurrent                      = 9;
   required int32 clipMax                          = 10;
