@@ -19,9 +19,9 @@ message SlugActionLoginRequest {
   required string userName = 2; // TODO: this is temporary
 }
 
-// empty message
-// message SlugActionLoginResponse {
-// }
+message SlugActionLoginResponse {
+  required int32 error = 1;
+}
 
 message ServerSlugGenericResponse {
   required int32 response = 1;
